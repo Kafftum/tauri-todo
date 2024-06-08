@@ -1,0 +1,141 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  --crimson:  rgb(153, 0, 0);
+}
+
+body {
+  font-family: Courier New;
+  background-color: gray;
+  color: black;
+}
+
+#tpod_container {
+  display: block;
+}
+
+#tpod_vp {
+  height: fit-content;
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 412px){
+  #tpod_vp {
+    width: 412px;
+  }
+}
+
+
+#todo_title {
+  font-family: Courier New;
+
+  width: fit-content;
+      
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#add_todo {
+  width: fit-content;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#todo_input {
+  width: 578px;
+  height: 40px;
+  font-size: large;
+
+  border: none;
+  outline: none;
+  background-color: dimgray;
+}
+
+#add_button {
+  font-size: small;
+
+  width: max-content;
+  height: max-content;
+
+  border-radius: 10%; 
+  border: none;
+  background-color: #006600;
+  color: white;
+  
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#add_todo > button:hover {
+  background-color: #009900;
+}
+
+#todo_display {
+  width: fit-content;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.todo_block {
+  width: 660px;
+      
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 25px;
+}
+
+.todo_block > h3 {
+  width: 578px;
+  
+  margin-left: 0;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.todo_block > button { 
+  font-size: small;
+
+  width: max-content;
+  height: max-content;
+
+  border-radius: 10%; 
+  border: none;
+  background-color: var(--crimson);
+  color: white;
+  
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.todo_block > button:hover {
+  background-color: red;
+}

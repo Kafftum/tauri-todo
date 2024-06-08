@@ -1,21 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  
   <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="styles.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tauri App</title> 
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="jquery-3.7.1.min.js"></script>
+    <script type="module" src="main.js" defer></script>
+  
   </head>
-
+  
   <body>
-    <div id="todo_display">
-      Empty
-    </div>
-    <form id="todo_form">
-      <input type="text" name="TODO" placeholder="Add a todo">
-      <button id="todo_button"></button>
-    </form>
+    <div id="tpod_container">   
+      <div id="tpod_vp">
 
-    <script type="module" src="/main.js"></script>
+        <div id="todo_title">
+          <h1>
+            TODO list
+          </h1>
+        </div>
+    
+        <div id="add_todo">
+          <input id="todo_input" size="80" type="text" autofocus />
+          <button id="add_button">
+            Add TODO
+          </button>
+        </div>
+      
+        <div id="todo_display">
+        </div>
+
+      </div>
+    </div>
   </body>
 </html>
