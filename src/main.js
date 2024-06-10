@@ -9,10 +9,17 @@ await invoke("return_vec").then((todo_list) => {
   for(i = 0; i < todo_list.length; i++) {
     createTodo(todo_list[i]);
   }
-})
+});
+
+todo_input.on("keypress", async (e) => {
+  if(e.key === "Enter") {
+    add_button.click();
+  }
+});
 
 add_button.click(async () => {
   await invoke("store_in_vec", { todo: todo_input.val() });
+  todo_input.val("");
   await invoke("return_vec").then((todo_list) => {
     todo_display.empty();
     
