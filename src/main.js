@@ -3,16 +3,22 @@ const invoke = window.__TAURI__.invoke;
 let todo_input = $("#todo_input");
 let add_button = $("#add_button");
 let todo_display = $("#todo_display");
-let todo_list;
+
+await invoke("return_vec").then((todo_list) => {
+  let i;
+  for(i = 0; i < todo_list.length; i++) {
+    createTodo(todo_list[i]);
+  }
+})
 
 add_button.click(async () => {
   await invoke("store_in_vec", { todo: todo_input.val() });
-  await invoke("return_vec").then((message) => {
+  await invoke("return_vec").then((todo_list) => {
     todo_display.empty();
     
     let i;
-    for(i = 0; i < message.length; i++) {
-      createTodo(message[i]);
+    for(i = 0; i < todo_list.length; i++) {
+      createTodo(todo_list[i]);
     }
   });
 });
